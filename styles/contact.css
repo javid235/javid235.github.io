@@ -1,0 +1,113 @@
+#contact-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9EBEA;
+    padding: 100px 10%;
+}
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    width: 1000px;
+    max-width: 1000px;
+}
+.cont-left{
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+    width: 100%;
+}
+.left-text {
+ display: flex;
+ align-items: center;
+ justify-content: start;
+ margin-bottom: 20px;
+}
+.cont-left h3{
+ display: inline-block;
+ margin-left: 10px;
+ font-size: 16px;
+ color: #5D5857;
+ font-weight: 600;
+}
+#map{
+    width: 100%;
+    height: 328px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
+}
+.cont-right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.cont-right h1{
+    margin-bottom: 31px;
+}
+.cont-right input{
+    margin-bottom: 27px;
+}
+.cont-right textarea{
+    margin-bottom: 35px;
+    resize: vertical;
+}
+.cont-right input,textarea::placeholder{
+    font-size: 12px;
+    font-weight: 600;
+}
+.cont-right input,textarea{
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid #BC8F8F;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cont-right button{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    border: none;
+    background-color: #BC8F8F;
+    border-radius: 7px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+.cont-right button:hover{
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .15);
+}
+
+
+@media screen and (min-width: 901px) {
+    
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .contact-container{
+        flex-direction: column;
+    }
+    .contact-container > :first-child{
+        order: 2;
+    }
+    .cont-left{
+        margin-right: 0;
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-container{
+        flex-direction: column;
+    }
+    .contact-container > :first-child{
+        order: 2;
+    }
+    .cont-left{
+        margin-right: 0;
+        margin-top: 60px;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Hero Section</title>
+<style>
+   *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+        body{
+            padding-bottom: 3000px;
+        }
+        h1{
+            color: #BC8F8F ;
+            font-size: 36px;
+            font-weight: 800;
+        }
+        h2{
+            color: #5D5857 ;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        p{
+            color: #5D5857 ;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+    /* hero */
+    
+        #hero{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #F9EBEA;
+            padding: 60px 10%;
+        }
+        .hero-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+        .hero-text{
+            padding-right:50px ;
+        }
+        .hero-text h2{
+            margin-bottom: 20px;
+        } 
+        .shop-btn{
+            border: none;
+            background-color: #BC8F8F;
+            color: white;
+            padding: 10px 50px 10px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            margin-top: 20px;
+        }
+        .shop-btn:hover{
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, .15);
+        }
+
+        .shop-btn img{
+            position: absolute;
+            right: 15px;
+            top: 12px;
+        }
+        .hero-image-container img{
+            border-radius: 20px;
+        }
+        @media screen and (min-width: 901px) {
+           .hero-container{
+            max-width: 1200px;
+           }
+        }
+        
+    
+        @media screen and (min-width: 601px) and (max-width: 900px) {
+            .hero-container{
+                flex-direction: column;
+                justify-content: center;
+            }
+            .hero-text{
+                text-align: center;
+                padding-right: 0;
+                margin-bottom: 60px ;
+            }
+            .hero-image-container img{
+                border-radius: 20px;
+                width: 100%;
+            }
+            .hero-text h1{
+                font-size: 33px ;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .hero-container{
+                flex-direction: column;
+                justify-content: center;
+                
+            }
+            .hero-text{
+                text-align: center;
+                padding-right: 0;
+                margin-bottom: 60px ;
+            }
+            .hero-image-container img{
+                border-radius: 20px;
+                width: 100%;
+            }
+            .hero-text h1{
+                font-size: 28px ;
+            }
+            .hero-text h2{
+                
+            } 
+        }
+</style>
+</head>
+<body>
+
+    <section id="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>INDULGE IN TRANQUILITY</h1>
+                <h2>Discover Luxurious Bath Essentials for a Serene Escape</h2>
+                <p>Experience pure relaxation with our handcrafted candles, 
+                nourishing bath milk, rejuvenating bath salts, effervescent
+                bath bombs, and invigorating shower steamers. Elevate your self-care routine
+                and immerse yourself in the ultimate serenity.</p>
+                <a href="/pages/products-main.html"><button class="shop-btn">Shop Now <img src="/img/arrow.svg" alt=""></button></a>
+            </div>
+            <div class="hero-image-container">
+                <img src="/img/candle.png" alt="">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

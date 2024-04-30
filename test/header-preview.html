@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+        body{
+            padding-bottom: 3000px;
+        }
+        h1{
+            color: #BC8F8F ;
+            font-size: 36px;
+            font-weight: 800;
+        }
+        h2{
+            color: #5D5857 ;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        p{
+            color: #5D5857 ;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+    /* -------------- */
+
+        #header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 30px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 999;
+            background-color: white;
+        }
+        .header-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1100px;
+        }
+        .nav-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-container li{
+            list-style: none;
+            margin-right: 18px;
+        }
+        .nav-container > :last-child {
+            margin-right: 0;
+        }
+        .nav-container li a{
+            text-decoration: none;
+            color: black;
+        }
+        .right-sec{
+            display: flex;
+            justify-content: space-between;
+        }
+        .right-sec img{
+            margin-left: 20px;
+        }
+        .right-sec > :first-child {
+            margin-left: 0;
+        }
+        .logo{
+            width: 65px;
+        }
+        #header.hide {
+            transform: translateY(-100%);
+            transition: transform 0.5s ease;
+         }
+
+        /* Styles for screens larger than 900px (e.g., desktops) */
+        @media screen and (min-width: 901px) {
+            .logo{
+                width: 100px;
+            }
+            .menu{
+                display: none;
+            }
+            .mobile-menu{
+                display: none;
+            }
+        }
+        
+        /* Styles for screens between 600px and 900px (e.g., tablets) */
+        @media screen and (min-width: 601px) and (max-width: 900px) {
+            #header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 30px ;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            }
+            .menu{
+                display: none;
+            }
+            .mobile-menu{
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            #header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 12px 30px ;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            }
+            .header-container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+            .nav-container{
+                display: none;
+            }
+            .right-sec{
+                display: none;
+            }
+            .logo{
+                width: 65px;
+            }
+            .menu{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .menu svg{
+                margin-right: 10px;
+            }
+            .mobile-menu{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding: 30px;
+            height: 100vh;
+            background-color: #BC8F8F;
+            position: fixed;
+            top: 80.88;
+            right: -100%;
+            transition: right 0.3s ease;
+            }
+
+            .mobile-menu.active {
+                right: 0;
+                left: 0;
+                top: 80.88px
+            }
+
+            .mob-nav-container{
+            margin-bottom: 30px;
+            }
+            .mob-nav-container li{
+            list-style: none;
+            text-align: center;
+            margin-bottom:15px ;
+            }
+
+            .mob-nav-container li a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 26px;
+            font-weight: 600;
+            }
+            .mob-right-sec{
+            display: flex;
+            justify-content: space-between;
+            }
+            .mob-right-sec img{
+            margin-left: 20px;
+            }
+            .mob-right-sec > :first-child {
+            margin-left: 0;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <div class="header-container">
+            <img class="logo"src="/img/logo.svg" alt="">
+            <nav>
+                <ul class="nav-container">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="products-main.html">Products</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="/pages/contact.html">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="right-sec">
+                <a href=""><img src="/img/account-icon.svg" alt=""></a>
+                <a href="/pages/cart.html"><img src="/img/cart-icon.svg" alt=""></a>
+            </div>
+            <div class="menu">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" width="27" height="27">
+                    <path fill="#000" d="M2 5h23c.6 0 1-.4 1-1s-.4-1-1-1H2c-.6 0-1 .4-1 1s.4 1 1 1zm0 8h23c.6 0 1-.4 1-1s-.4-1-1-1H2c-.6 0-1 .4-1 1s.4 1 1 1zm0 8h23c.6 0 1-.4 1-1s-.4-1-1-1H2c-.6 0-1 .4-1 1s.4 1 1 1z"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <section class="mobile-menu">
+        <nav>
+            <ul class="mob-nav-container">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products-main.html">Products</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="/pages/contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="mob-right-sec">
+            <a href=""><img src="/img/account-icon.svg" alt=""></a>
+            <a href="/pages/cart.html"><img src="/img/cart-icon.svg" alt=""></a>
+        </div>
+    </section>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        menuIcon.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
+        });
+
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+
+        window.addEventListener("scroll", function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            header.classList.add("hide");
+        } else {
+            // Scrolling up
+            header.classList.remove("hide");
+        }
+        lastScrollTop = scrollTop;
+        });
+    </script>
+</body>
+</html>
+
+
