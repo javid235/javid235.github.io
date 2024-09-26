@@ -123,7 +123,7 @@ export const products = [
     ],
   },
   {
-    category: 'Shower Steamers',
+    category: 'Shower Streamers',
     items: [
       {
         name: 'Eucalyptus Dream',
