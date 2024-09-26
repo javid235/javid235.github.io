@@ -40,7 +40,7 @@ switch (subPageValue) {
                         <div class="pro-max-cont">
                             <a href="/pages/products-main.html"><p>All</p></a>
                             <img src="/img/arrow2.svg" alt="">
-                            <a href=""><p>Candle</p></a>
+                            <a href=""><p>${cat}</p></a>
                         </div>
                     </div>`
     section.appendChild(proSection)
