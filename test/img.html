@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Image Gallery</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+<style>
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .gallery-container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  .main-image {
+    max-width: 100%;
+    cursor: zoom-in;
+  }
+  .thumbnails {
+    margin-top: 20px;
+  }
+  .thumbnail {
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    width: 100px; /* Adjust width as needed */
+    height: 200px; /* Maintain aspect ratio */
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery-container">
+  <a href="/img/" class="main-image-link">
+    <img src="/img/candle1.png" alt="Main Image" class="main-image">
+  </a>
+  <div class="thumbnails" id="thumbnailContainer">
+    <img src="/img/candle.png" alt="Thumbnail 1" class="thumbnail" onclick="changeImage('/img/candle.png')">
+    <img src="/img/p2.svg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage('/img/p2.svg')">
+    <img src="/img/candle.png" alt="Thumbnail 3" class="thumbnail" onclick="changeImage('/img/candle.png')">
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script>
+  function changeImage(imageUrl) {
+    document.querySelector('.main-image-link').href = imageUrl;
+    document.querySelector('.main-image').src = imageUrl;
+  }
+
+  $(document).ready(function() {
+    $('.main-image-link').magnificPopup({
+      type: 'image',
+      gallery: {
+        enabled: true
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

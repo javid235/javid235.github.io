@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+        body{
+            padding-bottom: 3000px;
+        }
+        h1{
+            color: #BC8F8F ;
+            font-size: 36px;
+            font-weight: 800;
+        }
+        h2{
+            color: #5D5857 ;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        p{
+            color: #5D5857 ;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+    /* -------------- */
+
+    #footer{
+        background-color: #5D5857;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 5%;
+    }
+    .footer-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1100px;
+    }
+    .footer-text-container{
+        display: flex;
+        justify-content: start;
+        flex: 1;
+        padding: 0 30px;
+    }
+    .footer-text{
+        margin-right: 35px;
+    }
+    .footer-text-container > :last-child {
+        margin-right: 0;
+    }
+    
+    .footer-text h4{
+        color: #F5B7B1;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .footer-text a{
+        text-decoration: none;
+    }
+    .footer-text p{
+        color: #ffffff;
+        font-weight: 300;
+        font-size: 18px;
+    }
+    .footer-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-icons a{
+        margin-left: 10px;
+    }
+    .footer-icons a:first-child {
+        margin-left: 0;
+    }
+    @media screen and (min-width: 901px) {
+    
+    }
+
+    /* Styles for screens between 600px and 900px (e.g., tablets) */
+    @media screen and (min-width: 601px) and (max-width: 900px) {
+    
+    }
+
+    @media screen and (max-width: 600px) {
+        #footer{
+            background-color: #5D5857;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 8% 30px 6%;
+        }
+        .footer-icons{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-logo{
+            width: 100px;
+        }
+        .footer-icons a{
+            margin-left: 0;
+            margin-top: 5px;
+        }
+        .footer-icons img{
+            width:30px;
+        }
+
+        .footer-icons a:first-child {
+            margin-top: 0;
+        }
+
+    }
+    </style>
+</head>
+<body>
+    <section id="footer">
+        <div class="footer-container">
+            <img class="footer-logo"src="/img/logo-w.svg" alt="">
+            <div class="footer-text-container">
+                <div class="footer-text">
+                    <h4>Need help</h4>
+                    <a href="/pages/contact.html"><p>Contact us</p></a>
+                    <a href="#"><p>Track order</p></a>
+                    <a href="#"><p>My Account</p></a>
+                </div>
+            </div>
+            
+            <div class="footer-icons">
+                <a href=""><img src="/img/facebook.svg" alt=""></a>
+                <a href=""><img src="/img/instagram.svg" alt=""></a>
+                <a href=""><img src="/img/twitter.svg" alt=""></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

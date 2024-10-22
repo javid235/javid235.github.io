@@ -1,0 +1,119 @@
+#pro-nav{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #F9EBEA;
+    margin-bottom: 20px;
+}
+.pro-max-cont{
+    max-width: 100%;
+}
+#pro-nav a{
+    display: inline-block;
+    text-decoration:none ;
+    margin-right: 5px;
+}
+#pro-nav img{
+    margin-right: 10px;
+}
+#pro-nav p{
+    font-size: 24px;
+    margin-right:6px;
+}
+
+
+/* product */
+#product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9EBEA;
+    padding: 70px 10%;
+    
+}
+.main-container{
+    width: 100%;
+}
+.main-container h1{
+    margin-bottom: 30px;
+}
+
+.product-top-info h4{
+    font-weight: 400;
+    font-size:  24px;
+}
+.product-top-info a{
+    text-decoration: none;
+}
+.product-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 20px;
+}
+@media only screen and (max-width: 600px) {
+    .product-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        column-gap: 40px;
+    }
+}
+  
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    /* CSS styles for medium devices */
+    .product-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+        column-gap: 40px;
+    }
+}
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+    /* CSS styles for medium devices */
+    .product-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+}
+
+.product-grid a{
+    text-decoration: none;
+}
+.product-cont{
+    background-color: white;
+    border-radius: 20px;
+    transition: .2s ease;
+}
+.product-cont:hover{
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .15);
+}
+.product-cont img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.pro-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 25px 20px;
+    margin-top: -10px;
+    border-radius: 0 0 20px 20px;
+}
+.product-name{
+    margin: 0 0 2px 0;
+}
+.price{
+    padding-left: 8px;
+}
+.pro-section{
+    margin-bottom: 40px;
+}
+
+
